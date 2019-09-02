@@ -1,6 +1,7 @@
 PODS:
   - Crashlytics (3.13.4):
     - Fabric (~> 1.10.2)
+  - DKChainableAnimationKit (2.0.1)
   - Fabric (1.10.2)
   - Firebase/Analytics (6.6.0):
     - Firebase/Core
@@ -66,16 +67,20 @@ PODS:
     - nanopb/encode (= 0.3.901)
   - nanopb/decode (0.3.901)
   - nanopb/encode (0.3.901)
+  - Toast-Swift (5.0.0)
 
 DEPENDENCIES:
   - Crashlytics (~> 3.13.4)
+  - DKChainableAnimationKit (~> 2.0.0)
   - Fabric (~> 1.10.2)
   - Firebase/Analytics
   - Firebase/Core
+  - Toast-Swift (~> 5.0.0)
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
     - Crashlytics
+    - DKChainableAnimationKit
     - Fabric
     - Firebase
     - FirebaseAnalytics
@@ -88,9 +93,11 @@ SPEC REPOS:
     - GoogleDataTransportCCTSupport
     - GoogleUtilities
     - nanopb
+    - Toast-Swift
 
 SPEC CHECKSUMS:
   Crashlytics: 2dfd686bcb918dc10ee0e76f7f853fe42c7bd552
+  DKChainableAnimationKit: bbb3c33fba2cf696b5da2a27fc50540777befb88
   Fabric: 706c8b8098fff96c33c0db69cbf81f9c551d0d74
   Firebase: a2b5951f30ff38fd3b3bdae9c7d340f940fd3c51
   FirebaseAnalytics: 48414ae5cbf6976d8a2f7177e0466540e5ab33ce
@@ -103,7 +110,8 @@ SPEC CHECKSUMS:
   GoogleDataTransportCCTSupport: 3451e7d8ba19093e533362a6d78d6d9014c6a037
   GoogleUtilities: e7dc37039b19df7fe543479d3e4a02ac8d11bb69
   nanopb: 2901f78ea1b7b4015c860c2fdd1ea2fee1a18d48
+  Toast-Swift: 36f4720243c8582c2be243a60a51e193c761f541
 
-PODFILE CHECKSUM: db4a350b9d297531c75b3d0a9cc90aefc71b160b
+PODFILE CHECKSUM: d3d5d572104ec06db0f549e9fb782176c325c56e
 
 COCOAPODS: 1.6.1

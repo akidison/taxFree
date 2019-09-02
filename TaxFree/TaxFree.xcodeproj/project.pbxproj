@@ -8,17 +8,44 @@
 
 /* Begin PBXBuildFile section */
 		0B2FF6539F77E9D8FCA0B1FD /* Pods_TaxFree.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3388C94C7912ED93D515A73F /* Pods_TaxFree.framework */; };
+		7A325A392311B064007F02C5 /* CalculateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A325A382311B064007F02C5 /* CalculateViewController.swift */; };
+		7A325A3B23128E4F007F02C5 /* CountriesRulesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A325A3A23128E4F007F02C5 /* CountriesRulesViewController.swift */; };
+		7A325A3D23129CE4007F02C5 /* InfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A325A3C23129CE4007F02C5 /* InfoViewController.swift */; };
+		7A325A3F23129DA7007F02C5 /* GermanyC.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 7A325A3E23129DA6007F02C5 /* GermanyC.jpg */; };
+		7A325A4223129E4F007F02C5 /* AustriaC.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 7A325A4123129E4F007F02C5 /* AustriaC.jpg */; };
+		7A325A44231476BD007F02C5 /* RUB.png in Resources */ = {isa = PBXBuildFile; fileRef = 7A325A43231476BD007F02C5 /* RUB.png */; };
+		7A325A4623147762007F02C5 /* KZT.png in Resources */ = {isa = PBXBuildFile; fileRef = 7A325A4523147762007F02C5 /* KZT.png */; };
+		7A325A4823147796007F02C5 /* BYN.png in Resources */ = {isa = PBXBuildFile; fileRef = 7A325A4723147796007F02C5 /* BYN.png */; };
+		7A325A4A231477CD007F02C5 /* UAH.png in Resources */ = {isa = PBXBuildFile; fileRef = 7A325A49231477CD007F02C5 /* UAH.png */; };
+		7A325A4C23158892007F02C5 /* ChooseCurrencyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A325A4B23158892007F02C5 /* ChooseCurrencyViewController.swift */; };
+		7A325A4E2315C59E007F02C5 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A325A4D2315C59E007F02C5 /* Utils.swift */; };
 		7A4F7D9E22B978E600D67359 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A4F7D9D22B978E600D67359 /* AppDelegate.swift */; };
 		7A4F7DA022B978E600D67359 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A4F7D9F22B978E600D67359 /* ViewController.swift */; };
 		7A4F7DA322B978E600D67359 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7A4F7DA122B978E600D67359 /* Main.storyboard */; };
 		7A4F7DA522B978E700D67359 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7A4F7DA422B978E700D67359 /* Assets.xcassets */; };
 		7A4F7DA822B978E700D67359 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7A4F7DA622B978E700D67359 /* LaunchScreen.storyboard */; };
 		7A8398C423086F7500106B07 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7A8398C323086F7500106B07 /* GoogleService-Info.plist */; };
+		7A8398C623114CF600106B07 /* taxImg.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 7A8398C523114CF600106B07 /* taxImg.jpg */; };
+		7A8398C92311502300106B07 /* calculatorImg.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 7A8398C82311502300106B07 /* calculatorImg.jpg */; };
+		7A8398CD2311576100106B07 /* hengImg.png in Resources */ = {isa = PBXBuildFile; fileRef = 7A8398CC2311576100106B07 /* hengImg.png */; };
+		7A8398CF23115A9800106B07 /* InitMainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A8398CE23115A9800106B07 /* InitMainViewController.swift */; };
+		7A8398D12311799000106B07 /* CountriesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A8398D02311799000106B07 /* CountriesViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		3388C94C7912ED93D515A73F /* Pods_TaxFree.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TaxFree.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5B60796B0CFD2B97955A6CB7 /* Pods-TaxFree.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TaxFree.release.xcconfig"; path = "Target Support Files/Pods-TaxFree/Pods-TaxFree.release.xcconfig"; sourceTree = "<group>"; };
+		7A325A382311B064007F02C5 /* CalculateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculateViewController.swift; sourceTree = "<group>"; };
+		7A325A3A23128E4F007F02C5 /* CountriesRulesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountriesRulesViewController.swift; sourceTree = "<group>"; };
+		7A325A3C23129CE4007F02C5 /* InfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoViewController.swift; sourceTree = "<group>"; };
+		7A325A3E23129DA6007F02C5 /* GermanyC.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = GermanyC.jpg; sourceTree = "<group>"; };
+		7A325A4123129E4F007F02C5 /* AustriaC.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = AustriaC.jpg; sourceTree = "<group>"; };
+		7A325A43231476BD007F02C5 /* RUB.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = RUB.png; sourceTree = "<group>"; };
+		7A325A4523147762007F02C5 /* KZT.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = KZT.png; sourceTree = "<group>"; };
+		7A325A4723147796007F02C5 /* BYN.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = BYN.png; sourceTree = "<group>"; };
+		7A325A49231477CD007F02C5 /* UAH.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = UAH.png; sourceTree = "<group>"; };
+		7A325A4B23158892007F02C5 /* ChooseCurrencyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChooseCurrencyViewController.swift; sourceTree = "<group>"; };
+		7A325A4D2315C59E007F02C5 /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
 		7A4F7D9A22B978E600D67359 /* TaxFree.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TaxFree.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7A4F7D9D22B978E600D67359 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7A4F7D9F22B978E600D67359 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -27,6 +54,11 @@
 		7A4F7DA722B978E700D67359 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7A4F7DA922B978E700D67359 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7A8398C323086F7500106B07 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		7A8398C523114CF600106B07 /* taxImg.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = taxImg.jpg; sourceTree = "<group>"; };
+		7A8398C82311502300106B07 /* calculatorImg.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = calculatorImg.jpg; sourceTree = "<group>"; };
+		7A8398CC2311576100106B07 /* hengImg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = hengImg.png; sourceTree = "<group>"; };
+		7A8398CE23115A9800106B07 /* InitMainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitMainViewController.swift; sourceTree = "<group>"; };
+		7A8398D02311799000106B07 /* CountriesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountriesViewController.swift; sourceTree = "<group>"; };
 		81CEAF0CF1B2BD4F6E227066 /* Pods-TaxFree.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TaxFree.debug.xcconfig"; path = "Target Support Files/Pods-TaxFree/Pods-TaxFree.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -42,10 +74,20 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7A325A4023129DB8007F02C5 /* countries_city */ = {
+			isa = PBXGroup;
+			children = (
+				7A325A3E23129DA6007F02C5 /* GermanyC.jpg */,
+				7A325A4123129E4F007F02C5 /* AustriaC.jpg */,
+			);
+			path = countries_city;
+			sourceTree = "<group>";
+		};
 		7A4F7D9122B978E600D67359 = {
 			isa = PBXGroup;
 			children = (
 				7A4F7D9C22B978E600D67359 /* TaxFree */,
+				7A8398C723114D1A00106B07 /* images */,
 				7A4F7D9B22B978E600D67359 /* Products */,
 				8AC9B547053E4B3045289B88 /* Pods */,
 				8958971FDE873D959ACEC9D0 /* Frameworks */,
@@ -65,6 +107,13 @@
 			children = (
 				7A4F7D9D22B978E600D67359 /* AppDelegate.swift */,
 				7A4F7D9F22B978E600D67359 /* ViewController.swift */,
+				7A8398CE23115A9800106B07 /* InitMainViewController.swift */,
+				7A8398D02311799000106B07 /* CountriesViewController.swift */,
+				7A325A4B23158892007F02C5 /* ChooseCurrencyViewController.swift */,
+				7A325A3A23128E4F007F02C5 /* CountriesRulesViewController.swift */,
+				7A325A382311B064007F02C5 /* CalculateViewController.swift */,
+				7A325A3C23129CE4007F02C5 /* InfoViewController.swift */,
+				7A325A4D2315C59E007F02C5 /* Utils.swift */,
 				7A4F7DA122B978E600D67359 /* Main.storyboard */,
 				7A4F7DA422B978E700D67359 /* Assets.xcassets */,
 				7A4F7DA622B978E700D67359 /* LaunchScreen.storyboard */,
@@ -72,6 +121,29 @@
 				7A8398C323086F7500106B07 /* GoogleService-Info.plist */,
 			);
 			path = TaxFree;
+			sourceTree = "<group>";
+		};
+		7A8398C723114D1A00106B07 /* images */ = {
+			isa = PBXGroup;
+			children = (
+				7A8398D82311886A00106B07 /* countries */,
+				7A325A4023129DB8007F02C5 /* countries_city */,
+				7A8398C523114CF600106B07 /* taxImg.jpg */,
+				7A8398C82311502300106B07 /* calculatorImg.jpg */,
+				7A8398CC2311576100106B07 /* hengImg.png */,
+			);
+			path = images;
+			sourceTree = "<group>";
+		};
+		7A8398D82311886A00106B07 /* countries */ = {
+			isa = PBXGroup;
+			children = (
+				7A325A43231476BD007F02C5 /* RUB.png */,
+				7A325A4523147762007F02C5 /* KZT.png */,
+				7A325A4723147796007F02C5 /* BYN.png */,
+				7A325A49231477CD007F02C5 /* UAH.png */,
+			);
+			path = countries;
 			sourceTree = "<group>";
 		};
 		8958971FDE873D959ACEC9D0 /* Frameworks */ = {
@@ -152,10 +224,19 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7A8398CD2311576100106B07 /* hengImg.png in Resources */,
+				7A8398C623114CF600106B07 /* taxImg.jpg in Resources */,
 				7A4F7DA822B978E700D67359 /* LaunchScreen.storyboard in Resources */,
+				7A325A4823147796007F02C5 /* BYN.png in Resources */,
+				7A325A4223129E4F007F02C5 /* AustriaC.jpg in Resources */,
+				7A325A3F23129DA7007F02C5 /* GermanyC.jpg in Resources */,
+				7A325A4623147762007F02C5 /* KZT.png in Resources */,
 				7A4F7DA522B978E700D67359 /* Assets.xcassets in Resources */,
 				7A8398C423086F7500106B07 /* GoogleService-Info.plist in Resources */,
+				7A325A44231476BD007F02C5 /* RUB.png in Resources */,
 				7A4F7DA322B978E600D67359 /* Main.storyboard in Resources */,
+				7A8398C92311502300106B07 /* calculatorImg.jpg in Resources */,
+				7A325A4A231477CD007F02C5 /* UAH.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -211,14 +292,18 @@
 			);
 			inputPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-TaxFree/Pods-TaxFree-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/DKChainableAnimationKit/DKChainableAnimationKit.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
+				"${BUILT_PRODUCTS_DIR}/Toast-Swift/Toast_Swift.framework",
 				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
 			);
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/DKChainableAnimationKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Toast_Swift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -233,8 +318,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7A325A4C23158892007F02C5 /* ChooseCurrencyViewController.swift in Sources */,
 				7A4F7DA022B978E600D67359 /* ViewController.swift in Sources */,
+				7A325A4E2315C59E007F02C5 /* Utils.swift in Sources */,
 				7A4F7D9E22B978E600D67359 /* AppDelegate.swift in Sources */,
+				7A8398CF23115A9800106B07 /* InitMainViewController.swift in Sources */,
+				7A325A3D23129CE4007F02C5 /* InfoViewController.swift in Sources */,
+				7A325A3B23128E4F007F02C5 /* CountriesRulesViewController.swift in Sources */,
+				7A325A392311B064007F02C5 /* CalculateViewController.swift in Sources */,
+				7A8398D12311799000106B07 /* CountriesViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

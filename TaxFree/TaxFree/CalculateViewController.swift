@@ -44,6 +44,10 @@ class CalculateViewController: UIViewController {
         label.layer.cornerRadius = 6
     }
     
+    override var prefersStatusBarHidden: Bool {
+        return true
+    }
+    
     @objc func textFieldDidChange(_ textField: UITextField) {
         textViewString = self.textViewLabel.text!
         if textViewString != "" {

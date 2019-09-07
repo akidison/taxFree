@@ -78,6 +78,8 @@ class ChooseCurrencyViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
         
+        let image = UIImage(named: "\(charCodeArray[indexPath.row])")
+        cell.imageView?.image = image?.circleMask
         cell.textLabel?.text = filteredDataCurrency[indexPath.row]
         cell.detailTextLabel?.text = charCodeArray[indexPath.row]
 
@@ -89,5 +91,9 @@ class ChooseCurrencyViewController: UITableViewController {
         choosedCell = charCodeArray[indexPath.row]
         choosedValue = valueArray[indexPath.row]
         self.performSegue(withIdentifier: "to_calculate_vc", sender: self)
+    }
+    
+    override var prefersStatusBarHidden: Bool {
+        return true
     }
 }

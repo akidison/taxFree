@@ -15,29 +15,27 @@ class InitMainViewController: UIViewController {
     let progress = Progress(totalUnitCount: 10)
     let jsonUrl = "https://www.cbr-xml-daily.ru/daily_json.js"
 
+    @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     @IBOutlet weak var test: UIView!
     @IBOutlet weak var barProgress: UIProgressView!
+    @IBOutlet weak var dataDownloadingLabel: UILabel!
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
+        
         self.getJsonData(urlAddress: jsonUrl, result: { finished, error in
             if finished == true && error == nil {
-                self.barProgress.alpha = 1.0
-                self.test.alpha = 1.0
-                self.test.animation.makeCenter(self.view.bounds.width/2, self.view.bounds.height/2).makeScale(3.0).spring.makeOpacity(0.0).animate(3.0).animationCompletion = {
-                    self.goToNextView()
-                }
+                print("success")
             } else {
-                self.barProgress.alpha = 0.0
-                self.test.alpha = 0.0
-                self.showToastInformationError(error: error)
+                print("fail")
             }
         })
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.immitationLoad()
+//        self.immitationLoad()
+        self.activityIndicator.startAnimating()
     }
     
     func goToNextView() {
@@ -64,38 +62,70 @@ class InitMainViewController: UIViewController {
     }
     
     func getJsonData(urlAddress: String, result: @escaping (Bool, Error?) -> Void) {
+        self.test.alpha = 0.0
+        self.activityIndicator.alpha = 1.0
         if (Utils().getValueFromDefaults(key: "json_object") == nil) {
             guard let url = URL(string: urlAddress) else {
                 print("Something wrong!")
                 self.view.makeToast("Something went wrong!")
                 result(false, nil)
+                self.showScreenAfterFail()
                 return
             }
-            // Asynchronous Http call to your api url, using NSURLSession:
             URLSession.shared.dataTask(with: url, completionHandler: { (data, response, error) -> Void in
-                // Check if data was received successfully
                 if error == nil && data != nil {
                     do {
-                        // Convert NSData to Dictionary where keys are of type String, and values are of any type
                         let json = try JSONSerialization.jsonObject(with: data!, options: JSONSerialization.ReadingOptions.mutableContainers) as! [String:AnyObject]
                         print(json)
                         result(true, error)
                         Utils().saveValueForDefaults(value: json, key: "json_object")
-                        // Access specific key with value of type String
-                        // let str = json["key"] as! String
+                        self.showScreenAfterSuccess()
                     } catch {
                         print(error)
                         result(false, error)
-                        // Something went wrong
+                        self.showScreenAfterFail()
                     }
                 } else if error != nil {
                     print(error?.localizedDescription as Any)
                     result(false, error)
+                    self.showScreenAfterFail()
                 }
             }).resume()
         } else {
             print("user defaults isn't empty")
             result(true, nil)
+            self.showScreenAfterSuccess()
+        }
+    }
+    
+    func showScreenAfterSuccess() {
+        DispatchQueue.main.async {
+            self.dataDownloadingLabel.alpha = 0.0
+            self.activityIndicator.stopAnimating()
+            self.showHideViewElements(alphaView: 1.0, alphaActivity: 0.0)
+            self.test.animation.makeCenter(self.view.bounds.width/2, self.view.bounds.height/2).makeScale(3.0).spring.makeOpacity(0.0).animate(3.0).animationCompletion = {
+                self.goToNextView()
+            }
+        }
+    }
+    
+    func showScreenAfterFail() {
+        DispatchQueue.main.async {
+            self.dataDownloadingLabel.alpha = 1.0
+            self.showHideViewElements(alphaView: 0.0, alphaActivity: 1.0)
+        }
+    }
+    
+    func showHideViewElements(alphaView: CGFloat, alphaActivity: CGFloat) {
+        self.activityIndicator.alpha = alphaActivity
+        self.test.alpha = alphaView
+    }
+    
+    func urlSession(_ session: URLSession, downloadTask: URLSessionDownloadTask, didWriteData bytesWritten: Int64, totalBytesWritten: Int64, totalBytesExpectedToWrite: Int64) {
+        if totalBytesExpectedToWrite > 0 {
+            let progress = Float(totalBytesWritten) / Float(totalBytesExpectedToWrite)
+            
+            self.barProgress.setProgress(progress, animated: true)
         }
     }
     
@@ -115,6 +145,10 @@ class InitMainViewController: UIViewController {
         self.view.makeToast("Something went wrong! \(defaultErrorMessage)\nError: \(error?.localizedDescription ?? "unidentified error")", duration: toastDuration, point: toastPosition, title: "Warning", image: nil, style: toastStyle) { (_) in
             self.showToastInformationError(error: error)
         }
+    }
+    
+    override var prefersStatusBarHidden: Bool {
+        return true
     }
 
 }

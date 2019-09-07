@@ -23,9 +23,9 @@ class ViewController: UIViewController {
     @IBOutlet weak var animateLabel: UILabel!
     
     override func viewDidLoad() {
-        super.viewDidLoad()        
-        self.addShadowToView(view: vatCountryRulesView)
-        self.addShadowToView(view: calculateView)
+        super.viewDidLoad()
+        self.addBoundsView(viewElement: vatCountryRulesView)
+        self.addBoundsView(viewElement: calculateView)
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -45,11 +45,11 @@ class ViewController: UIViewController {
         }
     }
 
-    func addShadowToView(view: UIView) {
-        view.layer.shadowColor = UIColor.gray.cgColor
-        view.layer.shadowOpacity = 1
-        view.layer.shadowOffset = CGSize(width: 0, height: 4)
-        view.layer.shadowRadius = 5
+    func addBoundsView(viewElement: UIView) {
+        viewElement.layer.masksToBounds = true
+        viewElement.layer.cornerRadius = 5
+        viewElement.layer.borderWidth = 0.65
+        viewElement.layer.borderColor = UIColor.white.cgColor
     }
     
     func addBorderButton(button: UIButton) {
@@ -89,6 +89,10 @@ class ViewController: UIViewController {
     
     func hideToastActivityIndicator() {
         self.view.hideToastActivity()
+    }
+    
+    override var prefersStatusBarHidden: Bool {
+        return true
     }
 }
 

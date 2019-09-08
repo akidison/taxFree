@@ -61,6 +61,10 @@
 		7AB5BE662323B42100AFD6CD /* ZAR.png in Resources */ = {isa = PBXBuildFile; fileRef = 7AB5BE652323B42100AFD6CD /* ZAR.png */; };
 		7AB5BE682323B45800AFD6CD /* KRW.png in Resources */ = {isa = PBXBuildFile; fileRef = 7AB5BE672323B45800AFD6CD /* KRW.png */; };
 		7AB5BE6A2323B51200AFD6CD /* HKD.png in Resources */ = {isa = PBXBuildFile; fileRef = 7AB5BE692323B51200AFD6CD /* HKD.png */; };
+		7AB5BE7423251E7D00AFD6CD /* header__close_button_959643.png in Resources */ = {isa = PBXBuildFile; fileRef = 7AB5BE7323251E7D00AFD6CD /* header__close_button_959643.png */; };
+		7AB5BE76232525AC00AFD6CD /* reversErrorws.png in Resources */ = {isa = PBXBuildFile; fileRef = 7AB5BE75232525AC00AFD6CD /* reversErrorws.png */; };
+		7AB5BE7823252BD600AFD6CD /* XDR.png in Resources */ = {isa = PBXBuildFile; fileRef = 7AB5BE7723252BD500AFD6CD /* XDR.png */; };
+		7AB5BE7A23252FEB00AFD6CD /* comingSoon.png in Resources */ = {isa = PBXBuildFile; fileRef = 7AB5BE7923252FEB00AFD6CD /* comingSoon.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -121,6 +125,10 @@
 		7AB5BE652323B42100AFD6CD /* ZAR.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ZAR.png; sourceTree = "<group>"; };
 		7AB5BE672323B45800AFD6CD /* KRW.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = KRW.png; sourceTree = "<group>"; };
 		7AB5BE692323B51200AFD6CD /* HKD.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = HKD.png; sourceTree = "<group>"; };
+		7AB5BE7323251E7D00AFD6CD /* header__close_button_959643.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = header__close_button_959643.png; sourceTree = "<group>"; };
+		7AB5BE75232525AC00AFD6CD /* reversErrorws.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = reversErrorws.png; sourceTree = "<group>"; };
+		7AB5BE7723252BD500AFD6CD /* XDR.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = XDR.png; sourceTree = "<group>"; };
+		7AB5BE7923252FEB00AFD6CD /* comingSoon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = comingSoon.png; sourceTree = "<group>"; };
 		81CEAF0CF1B2BD4F6E227066 /* Pods-TaxFree.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TaxFree.debug.xcconfig"; path = "Target Support Files/Pods-TaxFree/Pods-TaxFree.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -192,6 +200,9 @@
 				7A325A4023129DB8007F02C5 /* countries_city */,
 				7AB5BE302323A81400AFD6CD /* currencies_flags */,
 				7A8398C523114CF600106B07 /* taxImg.jpg */,
+				7AB5BE7923252FEB00AFD6CD /* comingSoon.png */,
+				7AB5BE75232525AC00AFD6CD /* reversErrorws.png */,
+				7AB5BE7323251E7D00AFD6CD /* header__close_button_959643.png */,
 				7A8398C82311502300106B07 /* calculatorImg.jpg */,
 				7A8398CC2311576100106B07 /* hengImg.png */,
 				7A325A4F231DBAF7007F02C5 /* arrows.png */,
@@ -243,6 +254,7 @@
 				7AB5BE652323B42100AFD6CD /* ZAR.png */,
 				7AB5BE672323B45800AFD6CD /* KRW.png */,
 				7AB5BE692323B51200AFD6CD /* HKD.png */,
+				7AB5BE7723252BD500AFD6CD /* XDR.png */,
 			);
 			path = currencies_flags;
 			sourceTree = "<group>";
@@ -328,8 +340,11 @@
 				7A8398CD2311576100106B07 /* hengImg.png in Resources */,
 				7AB5BE4E2323AF4900AFD6CD /* GBP.png in Resources */,
 				7AB5BE4C2323AEF500AFD6CD /* CNY.png in Resources */,
+				7AB5BE7423251E7D00AFD6CD /* header__close_button_959643.png in Resources */,
 				7AB5BE2F2323A7F300AFD6CD /* AMD.png in Resources */,
+				7AB5BE7A23252FEB00AFD6CD /* comingSoon.png in Resources */,
 				7A8398C623114CF600106B07 /* taxImg.jpg in Resources */,
+				7AB5BE76232525AC00AFD6CD /* reversErrorws.png in Resources */,
 				7AB5BE4A2323AEB800AFD6CD /* CAD.png in Resources */,
 				7AB5BE602323B35900AFD6CD /* INR.png in Resources */,
 				7AB5BE322323AAA300AFD6CD /* AUD.png in Resources */,
@@ -342,6 +357,7 @@
 				7AB5BE522323B03500AFD6CD /* TMT.png in Resources */,
 				7AB5BE5E2323B2E000AFD6CD /* EUR.png in Resources */,
 				7AB5BE442323ADCE00AFD6CD /* CZK.png in Resources */,
+				7AB5BE7823252BD600AFD6CD /* XDR.png in Resources */,
 				7AB5BE5C2323B16E00AFD6CD /* HUF.png in Resources */,
 				7AB5BE542323B06100AFD6CD /* TJS.png in Resources */,
 				7AB5BE3E2323AC9200AFD6CD /* SEK.png in Resources */,

@@ -8,17 +8,17 @@
 
 import UIKit
 
-class CountriesViewController: UITableViewController, UISearchBarDelegate {
+class CountriesViewController: UITableViewController {
     
-    let countriesArray = ["RUB", "KZT", "BYN", "UAH"]
+    let countriesArray = ["RUB", "KZT", "BYN", "UAH", "CNY"]
+    let countriesDetail = ["Russia", "Kazakhstan", "Belarus", "Ukraine", "China"]
     var filteredData: [String]!
     var choosedCell: String = ""
     
-    @IBOutlet weak var searchBar: UISearchBar!
+    @IBOutlet weak var closeItemButton: UIBarButtonItem!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.searchBar.delegate = self
         filteredData = countriesArray
     }
     
@@ -46,8 +46,10 @@ class CountriesViewController: UITableViewController, UISearchBarDelegate {
         cell.textLabel?.font = UIFont(name: "AppleSDGothicNeo-Bold", size: 20)
         let image = UIImage(named: "\(filteredData[indexPath.row])")
         cell.imageView?.image = image?.circleMask
-        
         cell.textLabel?.text = self.filteredData[indexPath.row]
+        cell.detailTextLabel?.text = self.countriesDetail[indexPath.row]
+        cell.detailTextLabel?.textColor = .white
+        
         return cell
     }
     
@@ -62,16 +64,6 @@ class CountriesViewController: UITableViewController, UISearchBarDelegate {
             return item.range(of: searchText, options: .caseInsensitive, range: nil, locale: nil) != nil
         }
         tableView.reloadData()
-    }
-    
-    func searchBarTextDidBeginEditing(_ searchBar: UISearchBar) {
-        self.searchBar.showsCancelButton = true
-        self.searchBar.barStyle = .default
-    }
-    
-    func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
-        searchBar.showsCancelButton = false
-        searchBar.resignFirstResponder()
     }
     
     override var prefersStatusBarHidden: Bool {

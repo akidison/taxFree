@@ -8,7 +8,7 @@
 
 import UIKit
 
-class CalculateViewController: UIViewController {
+class CalculateViewController: UIViewController, UITextFieldDelegate {
     
     var choosedValue: Double = 0.0
     var choosedDescription = ""
@@ -18,6 +18,9 @@ class CalculateViewController: UIViewController {
     var minimumPurchase: Double = 0
     var currencies: [String] = []
     var textViewString = ""
+    var isReversed: Bool = false
+    var valueK: Double = 0
+    var doubleValue: Double = 0
 
     @IBOutlet weak var currencyCodeLabel: UILabel!
     @IBOutlet weak var currencyCodeCustom: UILabel!
@@ -25,10 +28,10 @@ class CalculateViewController: UIViewController {
     @IBOutlet weak var textViewLabel: UITextField!
     @IBOutlet weak var resultLabel: UILabel!
     @IBOutlet weak var currencyCodeResult: UILabel!
+    @IBOutlet weak var reverseButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         textViewLabel.addTarget(self, action: #selector(CalculateViewController.textFieldDidChange(_:)),
                             for: UIControl.Event.editingChanged)
         
@@ -50,10 +53,97 @@ class CalculateViewController: UIViewController {
     
     @objc func textFieldDidChange(_ textField: UITextField) {
         textViewString = self.textViewLabel.text!
+        let dotsCount = textViewLabel.text!.components(separatedBy: ".").count - 1
+        let commaCount = textViewLabel.text!.components(separatedBy: ",").count - 1
+        let number = NumberFormatter().number(from: textViewString)
+        if let number = number {
+            doubleValue = Double(truncating: number)
+        }
+        if (dotsCount > 1 || commaCount > 1) {
+            textField.text!.removeLast()
+        } else {
+           self.calculateResult()
+        }
+    }
+    
+    func calculateResult() {
         if textViewString != "" {
-            self.resultLabel.text = String(format: "%.3f", (Double(textViewString)!/choosedValue))
+            if isReversed == false {
+                self.calculateWithoutRub()
+            } else {
+                self.reverseCalculateWithoutRub()
+            }
         } else {
             self.resultLabel.text = "0.0"
         }
+    }
+    
+    func reverseCalculateWithoutRub() {
+        if self.choosedCountry == "KZT" || self.choosedCountry == "BYN" || self.choosedCountry == "UAH" || self.choosedCountry == "CNY" {
+            self.reverseCalculateValueWithDifferentValue()
+        } else {
+            self.resultLabel.text = String(format: "%.3f", (Double(textViewString)!*choosedValue))
+        }
+    }
+    
+    func calculateWithoutRub() {
+        if self.choosedCountry == "KZT" || self.choosedCountry == "BYN" || self.choosedCountry == "UAH" || self.choosedCountry == "CNY" {
+            self.calculateValueWithDifferentValue()
+        } else {
+            self.resultLabel.text = String(format: "%.3f", (Double(doubleValue)/choosedValue))
+        }
+    }
+    
+    func reverseCalculateValueWithDifferentValue() {
+        if choosedCurrency == "RUB" {
+            self.resultLabel.text = String(format: "%.3f", (Double(textViewString)!*((1/choosedValue))))
+        } else {
+            self.resultLabel.text = String(format: "%.3f", (Double(textViewString)!*((1/valueK)*choosedValue)))
+        }
+    }
+    
+    func calculateValueWithDifferentValue() {
+        if choosedCurrency == "RUB" {
+            self.resultLabel.text = String(format: "%.3f", (Double(doubleValue)/((1/choosedValue))))
+        } else {
+            self.resultLabel.text = String(format: "%.3f", (Double(doubleValue)/((1/valueK)*choosedValue)))
+        }
+    }
+    
+    @IBAction func reverseButtonClicked(_ sender: Any) {
+        self.textViewLabel.text = ""
+        self.resultLabel.text = "0.0"
+        let str = self.currencyCodeLabel.text
+        if self.isReversed == false {
+            self.reverseButton.rotate360Degrees()
+            isReversed = true
+            self.currencyCodeLabel.text = self.currencyCodeResult.text
+            self.currencyCodeResult.text = str
+        } else {
+            self.reverseButton.rotate360Degrees()
+            isReversed = false
+            self.currencyCodeLabel.text = self.currencyCodeResult.text
+            self.currencyCodeResult.text = str
+        }
+    }
+    
+    func animateReverseButton() {
+        UIView.animate(withDuration: 0.25) {
+            self.reverseButton.transform = CGAffineTransform(rotationAngle: CGFloat.pi)
+        }
+    }
+}
+
+extension UIView {
+    func rotate360Degrees(duration: CFTimeInterval = 0.35, completionDelegate: AnyObject? = nil) {
+        let rotateAnimation = CABasicAnimation(keyPath: "transform.rotation")
+        rotateAnimation.fromValue = 0.0
+        rotateAnimation.toValue = CGFloat.pi
+        rotateAnimation.duration = duration
+        
+        if let delegate: AnyObject = completionDelegate {
+            rotateAnimation.delegate = (delegate as! CAAnimationDelegate)
+        }
+        self.layer.add(rotateAnimation, forKey: nil)
     }
 }

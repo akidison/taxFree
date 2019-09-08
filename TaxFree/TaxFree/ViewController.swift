@@ -8,11 +8,14 @@
 
 import UIKit
 import Toast_Swift
+import StoreKit
 
 class ViewController: UIViewController {
     
     public var dict: [String : AnyObject] = [:]
     
+    let runIncrementerSetting = "numberOfRuns"
+    let minimumRunCount = 2
     var namesArray: [String] = ["EUR", "USD", "GPB", "BYN", "BGN", "DKK", "KZT", "CHF", "JPY"]
     var i = 0
     
@@ -24,6 +27,8 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.incrementAppRuns()
+        self.showReview()
         self.addBoundsView(viewElement: vatCountryRulesView)
         self.addBoundsView(viewElement: calculateView)
     }
@@ -48,7 +53,7 @@ class ViewController: UIViewController {
     func addBoundsView(viewElement: UIView) {
         viewElement.layer.masksToBounds = true
         viewElement.layer.cornerRadius = 5
-        viewElement.layer.borderWidth = 0.65
+        viewElement.layer.borderWidth = 0.45
         viewElement.layer.borderColor = UIColor.white.cgColor
     }
     
@@ -93,6 +98,39 @@ class ViewController: UIViewController {
     
     override var prefersStatusBarHidden: Bool {
         return true
+    }
+    
+    func incrementAppRuns() {
+        let usD = UserDefaults()
+        let runs = getRunCounts() + 1
+        usD.setValuesForKeys([runIncrementerSetting: runs])
+        usD.synchronize()
+    }
+    
+    func getRunCounts () -> Int {
+        let usD = UserDefaults()
+        let savedRuns = usD.value(forKey: runIncrementerSetting)
+        var runs = 0
+        if (savedRuns != nil) {
+            runs = savedRuns as! Int
+        }
+        print("Run Counts are \(runs)")
+        return runs
+    }
+    
+    func showReview() {
+        let runs = getRunCounts()
+        print("Show Review")
+        if (runs > minimumRunCount) {
+            if #available(iOS 10.3, *) {
+                print("Review Requested")
+                SKStoreReviewController.requestReview()
+            } else {
+                // Fallback on earlier versions
+            }
+        } else {
+            print("Runs are not enough to request review!")
+        }
     }
 }
 

@@ -20,11 +20,11 @@ class ChooseCurrencyViewController: UITableViewController {
     var valueArray: [Double] = []
     var choosedCell = ""
     var filteredDataCurrency: [String]!
+    var valueK: Double = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        print(Utils().getValueFromDefaults(key: "json_object") as Any)
         json = (Utils().getValueFromDefaults(key: "json_object")) as! Dictionary<String, AnyObject>
         
         if let title = json["Valute"] {
@@ -61,6 +61,7 @@ class ChooseCurrencyViewController: UITableViewController {
                 nextViewController.choosedCountry = choosedCountry
                 nextViewController.choosedDescription = choosedDescription
                 nextViewController.choosedValue = choosedValue
+                nextViewController.valueK = valueK
             }
         }
     }
@@ -78,11 +79,13 @@ class ChooseCurrencyViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
         
+        self.removeCountry()
+        
         let image = UIImage(named: "\(charCodeArray[indexPath.row])")
         cell.imageView?.image = image?.circleMask
         cell.textLabel?.text = filteredDataCurrency[indexPath.row]
         cell.detailTextLabel?.text = charCodeArray[indexPath.row]
-
+        
         return cell
     }
     
@@ -95,5 +98,39 @@ class ChooseCurrencyViewController: UITableViewController {
     
     override var prefersStatusBarHidden: Bool {
         return true
+    }
+    
+    func removeCountry() {
+        if (choosedCountry != "RUB") {
+            self.chooseIndex(index: self.findNeededElement())
+        }
+    }
+    
+    func findNeededElement() -> Int {
+        for i in charCodeArray {
+            if choosedCountry == "KZT" && i == "KZT" {
+                return charCodeArray.firstIndex(of: "KZT")!
+            }
+            if choosedCountry == "BYN" && i == "BYN" {
+                return charCodeArray.firstIndex(of: "BYN")!
+            }
+            if choosedCountry == "UAH" && i == "UAH" {
+                return charCodeArray.firstIndex(of: "UAH")!
+            }
+            if choosedCountry == "CNY" && i == "CNY" {
+                return charCodeArray.firstIndex(of: "CNY")!
+            }
+        }
+        return charCodeArray.firstIndex(of: "RUB")!
+    }
+    
+    func chooseIndex(index: Int) {
+        let i = valueArray.remove(at: index)
+        valueK = i
+        valueArray.insert(i, at: index)
+        charCodeArray.remove(at: index)
+        charCodeArray.insert("RUB", at: index)
+        filteredDataCurrency.remove(at: index)
+        filteredDataCurrency.insert("Российский рубль", at: index)
     }
 }

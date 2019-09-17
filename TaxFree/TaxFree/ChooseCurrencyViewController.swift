@@ -24,6 +24,7 @@ class ChooseCurrencyViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.navigationItem.title = Utils().getLocalizeString(key: "top_item_text")
         self.createRightButtonItem()
         
         json = (Utils().getValueFromDefaults(key: "json_object")) as! Dictionary<String, AnyObject>
@@ -68,7 +69,6 @@ class ChooseCurrencyViewController: UITableViewController {
     }
 
     // MARK: - Table view data source
-
     override func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
@@ -84,7 +84,7 @@ class ChooseCurrencyViewController: UITableViewController {
         
         let image = UIImage(named: "\(charCodeArray[indexPath.row])")
         cell.imageView?.image = image?.circleMask
-        cell.textLabel?.text = filteredDataCurrency[indexPath.row]
+        cell.textLabel?.text = Utils().getLocalizeString(key: filteredDataCurrency[indexPath.row])
         cell.detailTextLabel?.text = charCodeArray[indexPath.row]
         
         return cell

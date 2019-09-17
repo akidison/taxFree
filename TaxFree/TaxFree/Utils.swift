@@ -27,7 +27,7 @@ class Utils: NSObject {
         toastStyle.messageAlignment = .center
         toastStyle.messageFont = UIFont(name: "AppleSDGothicNeo-Bold", size: 15)!
         let toastPosition = CGPoint(x: toastView.bounds.width/2, y: toastView.bounds.height/2)
-        toastView.makeToast("Successfully added to favourites!", duration: 1.5, point: toastPosition, title: "Done!", image: UIImage(named: "success.png"), style: toastStyle, completion: nil)
+        toastView.makeToast(Utils().getLocalizeString(key: "toast_message_text_add"), duration: 1.5, point: toastPosition, title: Utils().getLocalizeString(key: "toast_title_text_add"), image: UIImage(named: "success.png"), style: toastStyle, completion: nil)
     }
     
     func getLocalizeString(key: String) -> String {

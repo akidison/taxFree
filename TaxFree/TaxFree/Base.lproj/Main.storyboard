@@ -104,7 +104,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <searchBar key="tableHeaderView" contentMode="redraw" id="WdV-Dn-ky9">
-                            <rect key="frame" x="0.0" y="0.0" width="226" height="44"/>
+                            <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                             <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                             <textInputTraits key="textInputTraits"/>
                         </searchBar>
@@ -469,7 +469,6 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" id="JNG-EA-cDS">
-                        <barButtonItem key="backBarButtonItem" title="COUNTRIES" id="OcV-Br-uTP"/>
                         <barButtonItem key="rightBarButtonItem" title="Item" image="header__close_button_959643.png" width="10" style="done" id="DuU-Ud-JM2">
                             <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <connections>
@@ -551,7 +550,7 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </textAttributes>
                             <items>
-                                <navigationItem title="Favourites" id="3hd-wJ-29E">
+                                <navigationItem id="3hd-wJ-29E">
                                     <barButtonItem key="rightBarButtonItem" image="header__close_button_959643.png" id="uS4-YT-ZRS">
                                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <connections>
@@ -562,25 +561,25 @@
                             </items>
                         </navigationBar>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" textLabel="h0P-Ta-OVe" detailTextLabel="phO-7C-XUI" rowHeight="70" style="IBUITableViewCellStyleSubtitle" id="2tX-2v-OJj">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="cell" textLabel="h0P-Ta-OVe" detailTextLabel="phO-7C-XUI" rowHeight="70" style="IBUITableViewCellStyleSubtitle" id="2tX-2v-OJj">
                                 <rect key="frame" x="0.0" y="72" width="320" height="70"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="2tX-2v-OJj" id="jJT-G9-QcY">
-                                    <rect key="frame" x="0.0" y="0.0" width="320" height="69.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="286" height="69.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="h0P-Ta-OVe">
-                                            <rect key="frame" x="16" y="15" width="33.5" height="20.5"/>
+                                            <rect key="frame" x="16" y="13" width="34" height="20.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <nil key="textColor"/>
+                                            <fontDescription key="fontDescription" name="AppleSDGothicNeo-Bold" family="Apple SD Gothic Neo" pointSize="17"/>
+                                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Subtitle" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="phO-7C-XUI">
-                                            <rect key="frame" x="16" y="38.5" width="44" height="14.5"/>
+                                            <rect key="frame" x="16" y="36.5" width="42.5" height="17"/>
                                             <autoresizingMask key="autoresizingMask"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                                            <nil key="textColor"/>
+                                            <fontDescription key="fontDescription" name="AppleSDGothicNeo-Thin" family="Apple SD Gothic Neo" pointSize="14"/>
+                                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
@@ -593,6 +592,9 @@
                             <outlet property="delegate" destination="jtv-c2-LiE" id="Rig-nS-88h"/>
                         </connections>
                     </tableView>
+                    <connections>
+                        <outlet property="navigationItemBar" destination="3hd-wJ-29E" id="tJb-86-nf7"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VOb-Lc-qV6" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -765,7 +767,9 @@
                         <outlet property="currencyCodeCustom" destination="skX-xN-pbR" id="oRu-Cq-1oc"/>
                         <outlet property="currencyCodeLabel" destination="skX-xN-pbR" id="RMS-yg-zqI"/>
                         <outlet property="currencyCodeResult" destination="FPp-8H-tU2" id="Tr4-Xj-w5f"/>
+                        <outlet property="moneyAmmountLabel" destination="yR6-FG-jZd" id="rMg-Y2-cMA"/>
                         <outlet property="resultLabel" destination="ykW-hc-IvV" id="Mva-9w-ZRx"/>
+                        <outlet property="resultTextLabel" destination="ZJM-0v-zD6" id="rdA-q2-Gpu"/>
                         <outlet property="reverseButton" destination="Brp-xL-kip" id="dNP-6W-7fW"/>
                         <outlet property="textViewLabel" destination="Ubi-sl-1tN" id="Q8d-ED-j0V"/>
                     </connections>

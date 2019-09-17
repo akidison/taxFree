@@ -29,9 +29,14 @@ class CalculateViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var resultLabel: UILabel!
     @IBOutlet weak var currencyCodeResult: UILabel!
     @IBOutlet weak var reverseButton: UIButton!
+    @IBOutlet weak var resultTextLabel: UILabel!
+    @IBOutlet weak var moneyAmmountLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.navigationItem.title = Utils().getLocalizeString(key: "calk_text")
+        self.resultTextLabel.text = Utils().getLocalizeString(key: "result_text_label")
+        self.moneyAmmountLabel.text = Utils().getLocalizeString(key: "money_amount_text")
         self.changeCursorColor()
         self.createRightButtonItem()
         textViewLabel.addTarget(self, action: #selector(CalculateViewController.textFieldDidChange(_:)),
@@ -40,7 +45,7 @@ class CalculateViewController: UIViewController, UITextFieldDelegate {
         textViewLabel.becomeFirstResponder()
         self.currencyCodeLabel.text = choosedCountry
         self.currencyCodeResult.text = choosedCurrency
-        self.countryLabel.text = choosedDescription
+        self.countryLabel.text = Utils().getLocalizeString(key: choosedDescription)
         print(choosedValue)
     }
 
@@ -153,6 +158,7 @@ class CalculateViewController: UIViewController, UITextFieldDelegate {
     }
     
     @objc func addTapped() {
+        Utils().saveValueForDefaults(value: choosedCurrency, key: "currency_saved")
         Utils().createCustomToast(toastView: self.view)
     }
 }

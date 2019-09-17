@@ -10,8 +10,13 @@ import UIKit
 
 class FavouritesViewController: UITableViewController {
     
+    var favouritesCUrrency: [String] = []
+    
+    @IBOutlet weak var navigationItemBar: UINavigationItem!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.navigationItemBar.title = Utils().getLocalizeString(key: "fav_top_item_text")
 
     }
 

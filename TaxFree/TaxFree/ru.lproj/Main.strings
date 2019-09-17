@@ -1,0 +1,90 @@
+
+/* Class = "UILabel"; text = "CURRENCY CONVERTER"; ObjectID = "0zl-QZ-U72"; */
+"0zl-QZ-U72.text" = "CURRENCY CONVERTER";
+
+/* Class = "UINavigationItem"; title = "Favourites"; ObjectID = "3hd-wJ-29E"; */
+"3hd-wJ-29E.title" = "Favourites";
+
+/* Class = "UIViewController"; title = "CALCULATOR"; ObjectID = "3zR-rh-r4r"; */
+"3zR-rh-r4r.title" = "CALCULATOR";
+
+/* Class = "UIButton"; normalTitle = "CURRENCY CALCULATOR"; ObjectID = "5mK-xi-Xrg"; */
+"5mK-xi-Xrg.normalTitle" = "CURRENCY CALCULATOR";
+
+/* Class = "UILabel"; text = "Currency Converter"; ObjectID = "6fy-xp-S0D"; */
+"6fy-xp-S0D.text" = "Currency Converter";
+
+/* Class = "UIBarButtonItem"; title = "Item"; ObjectID = "DuU-Ud-JM2"; */
+"DuU-Ud-JM2.title" = "Item";
+
+/* Class = "UILabel"; text = "What you need"; ObjectID = "FOh-Y1-p2e"; */
+"FOh-Y1-p2e.text" = "What you need";
+
+/* Class = "UILabel"; text = "USD"; ObjectID = "FPp-8H-tU2"; */
+"FPp-8H-tU2.text" = "USD";
+
+/* Class = "UILabel"; text = "Data downloading..."; ObjectID = "Fl0-Kr-C5x"; */
+"Fl0-Kr-C5x.text" = "Data downloading...";
+
+/* Class = "UILabel"; text = "Tax in"; ObjectID = "Gcl-7l-0EA"; */
+"Gcl-7l-0EA.text" = "Tax in";
+
+/* Class = "UILabel"; text = "Title"; ObjectID = "If3-tF-qD2"; */
+"If3-tF-qD2.text" = "Title";
+
+/* Class = "UINavigationItem"; title = "YOUR COUNTRY"; ObjectID = "JNG-EA-cDS"; */
+"JNG-EA-cDS.title" = "YOUR COUNTRY";
+
+/* Class = "UIBarButtonItem"; title = "COUNTRIES"; ObjectID = "OcV-Br-uTP"; */
+"OcV-Br-uTP.title" = "COUNTRIES";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "WlB-m8-cYl"; */
+"WlB-m8-cYl.text" = "Label";
+
+/* Class = "UILabel"; text = "Result:"; ObjectID = "ZJM-0v-zD6"; */
+"ZJM-0v-zD6.text" = "Result:";
+
+/* Class = "UIBarButtonItem"; title = "Close"; ObjectID = "a8E-UY-2eZ"; */
+"a8E-UY-2eZ.title" = "Close";
+
+/* Class = "UINavigationItem"; title = "Countries"; ObjectID = "c9Q-MU-Bz7"; */
+"c9Q-MU-Bz7.title" = "Countries";
+
+/* Class = "UILabel"; text = "Title"; ObjectID = "h0P-Ta-OVe"; */
+"h0P-Ta-OVe.text" = "Title";
+
+/* Class = "UILabel"; text = "Title"; ObjectID = "iMt-Ma-BS7"; */
+"iMt-Ma-BS7.text" = "Title";
+
+/* Class = "UILabel"; text = "Great functional will be here."; ObjectID = "jLU-g2-cTk"; */
+"jLU-g2-cTk.text" = "Great functional will be here.";
+
+/* Class = "UITableViewController"; title = "CURRENCY"; ObjectID = "ofR-qM-t6B"; */
+"ofR-qM-t6B.title" = "CURRENCY";
+
+/* Class = "UILabel"; text = "Welcome"; ObjectID = "pFO-2d-7aZ"; */
+"pFO-2d-7aZ.text" = "Welcome";
+
+/* Class = "UILabel"; text = "Subtitle"; ObjectID = "phO-7C-XUI"; */
+"phO-7C-XUI.text" = "Subtitle";
+
+/* Class = "UILabel"; text = "Detail"; ObjectID = "qqJ-xx-CjS"; */
+"qqJ-xx-CjS.text" = "Detail";
+
+/* Class = "UILabel"; text = "Calculate your currency. Fast and easy to use currency converter."; ObjectID = "rN2-R2-WkS"; */
+"rN2-R2-WkS.text" = "Calculate your currency. Fast and easy to use currency converter.";
+
+/* Class = "UILabel"; text = "Subtitle"; ObjectID = "sIB-iG-m5P"; */
+"sIB-iG-m5P.text" = "Subtitle";
+
+/* Class = "UILabel"; text = "USD"; ObjectID = "skX-xN-pbR"; */
+"skX-xN-pbR.text" = "USD";
+
+/* Class = "UITextView"; text = "Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda."; ObjectID = "wnw-pN-gjz"; */
+"wnw-pN-gjz.text" = "Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.";
+
+/* Class = "UILabel"; text = "money amount"; ObjectID = "yR6-FG-jZd"; */
+"yR6-FG-jZd.text" = "money amount";
+
+/* Class = "UILabel"; text = "0.0"; ObjectID = "ykW-hc-IvV"; */
+"ykW-hc-IvV.text" = "0.0";

@@ -32,6 +32,8 @@ class CalculateViewController: UIViewController, UITextFieldDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.changeCursorColor()
+        self.createRightButtonItem()
         textViewLabel.addTarget(self, action: #selector(CalculateViewController.textFieldDidChange(_:)),
                             for: UIControl.Event.editingChanged)
         
@@ -131,6 +133,27 @@ class CalculateViewController: UIViewController, UITextFieldDelegate {
         UIView.animate(withDuration: 0.25) {
             self.reverseButton.transform = CGAffineTransform(rotationAngle: CGFloat.pi)
         }
+    }
+    
+    func changeCursorColor() {
+        UITextField.appearance().tintColor = .white
+    }
+    
+    func createRightButtonItem() {
+        self.navigationItem.leftBarButtonItem = nil
+        let button = UIButton(type: .custom)
+        button.setImage(UIImage (named: "plusImage.png"), for: .normal)
+        button.frame = CGRect(x: 0.0, y: 0.0, width: 25.0, height: 25.0)
+        button.widthAnchor.constraint(equalToConstant: 25.0).isActive = true
+        button.heightAnchor.constraint(equalToConstant: 25.0).isActive = true
+        button.addTarget(target, action: #selector(addTapped), for: .touchUpInside)
+        let barButtonItem = UIBarButtonItem(customView: button)
+        
+        self.navigationItem.rightBarButtonItems = [barButtonItem]
+    }
+    
+    @objc func addTapped() {
+        Utils().createCustomToast(toastView: self.view)
     }
 }
 

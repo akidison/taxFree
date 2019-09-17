@@ -1,0 +1,20 @@
+/* 
+  Localizable.strings
+  TaxFree
+
+  Created by Andrey Kiselev on 16/09/2019.
+  Copyright © 2019 Andrey Kiselev. All rights reserved.
+*/
+
+"currency_converter" = "Currency Converter";
+"data_downloading" = "Data downloading...";
+"sub_title_cc" = "What you need";
+"welcome" = "Welcome";
+"calculator" = "CURRENCY CALCULATOR";
+"sub_calculator" = "Calculate your currency. Fast and easy to use currency converter.";
+"russia" = "Russia";
+"kazakhstan" = "Kazakhstan";
+"belarus" = "Belarus";
+"ukraine" = "Ukraine";
+"china" = "China";
+"bar_title_label" = "YOUR COUNTRY";

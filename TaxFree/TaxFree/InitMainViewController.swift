@@ -15,6 +15,7 @@ class InitMainViewController: UIViewController {
     let progress = Progress(totalUnitCount: 10)
     let jsonUrl = "https://www.cbr-xml-daily.ru/daily_json.js"
 
+    @IBOutlet weak var currencyConverterLabel: UILabel!
     @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     @IBOutlet weak var test: UIView!
     @IBOutlet weak var barProgress: UIProgressView!
@@ -35,6 +36,7 @@ class InitMainViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 //        self.immitationLoad()
+        self.currencyConverterLabel.text = Utils().getLocalizeString(key: "currency_converter")
         self.activityIndicator.startAnimating()
     }
     

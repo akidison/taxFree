@@ -24,6 +24,7 @@ class ChooseCurrencyViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.createRightButtonItem()
         
         json = (Utils().getValueFromDefaults(key: "json_object")) as! Dictionary<String, AnyObject>
         
@@ -132,5 +133,23 @@ class ChooseCurrencyViewController: UITableViewController {
         charCodeArray.insert("RUB", at: index)
         filteredDataCurrency.remove(at: index)
         filteredDataCurrency.insert("Российский рубль", at: index)
+    }
+    
+    func createRightButtonItem() {
+        self.navigationItem.leftBarButtonItem = nil
+        let button = UIButton(type: .custom)
+        button.setImage(UIImage (named: "Star-Full.png"), for: .normal)
+        button.frame = CGRect(x: 0.0, y: 0.0, width: 25.0, height: 25.0)
+        button.widthAnchor.constraint(equalToConstant: 25.0).isActive = true
+        button.heightAnchor.constraint(equalToConstant: 25.0).isActive = true
+        let barButtonItem = UIBarButtonItem(customView: button)
+        button.addTarget(self, action: #selector(addTapped), for: .touchUpInside)
+        
+        self.navigationItem.rightBarButtonItems = [barButtonItem]
+    }
+    
+    @objc func addTapped() {
+        let favouritesVc = storyboard?.instantiateViewController(withIdentifier: "favourites_vc") as! FavouritesViewController
+        present(favouritesVc, animated: true, completion: nil)
     }
 }

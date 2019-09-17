@@ -9,26 +9,36 @@
 import UIKit
 import Toast_Swift
 import StoreKit
+import DKChainableAnimationKit
 
 class ViewController: UIViewController {
     
     public var dict: [String : AnyObject] = [:]
     
     let runIncrementerSetting = "numberOfRuns"
-    let minimumRunCount = 2
+    let minimumRunCount = 3
     var namesArray: [String] = ["EUR", "USD", "GPB", "BYN", "BGN", "DKK", "KZT", "CHF", "JPY"]
     var i = 0
     
+    @IBOutlet weak var subTitleLabel: UILabel!
+    @IBOutlet weak var currencyConverterLabel: UILabel!
+    @IBOutlet weak var calculatorImage: UIImageView!
     @IBOutlet weak var vatCountryRulesView: UIView!
     @IBOutlet weak var calculateView: UIView!
     @IBOutlet weak var countryRulesButton: UIButton!
     @IBOutlet weak var refundCalcButton: UIButton!
     @IBOutlet weak var animateLabel: UILabel!
+    @IBOutlet weak var calculateSubLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.currencyConverterLabel.text = Utils().getLocalizeString(key: "currency_converter")
+        self.subTitleLabel.text = Utils().getLocalizeString(key: "sub_title_cc")
+        self.animateLabel.text = Utils().getLocalizeString(key: "welcome")
+        self.refundCalcButton.setTitle(Utils().getLocalizeString(key: "calculator"), for: .normal)
+        self.calculateSubLabel.text = Utils().getLocalizeString(key: "sub_calculator")
         self.incrementAppRuns()
-        self.showReview()
+//        self.showReview() // comment out before review
         self.addBoundsView(viewElement: vatCountryRulesView)
         self.addBoundsView(viewElement: calculateView)
     }
@@ -44,7 +54,14 @@ class ViewController: UIViewController {
     
     @IBAction func calculateButtonClicked(_ sender: Any) {
         if (Utils().getValueFromDefaults(key: "json_object") != nil) {
-            self.performSegue(withIdentifier: "choose_your_country", sender: self)
+            UIView.animate(withDuration: 0.4, animations: {
+                self.calculateView.frame.origin.y += 1000
+            }, completion: { _ in
+                self.performSegue(withIdentifier: "choose_your_country", sender: self)
+                UIView.animate(withDuration: 2.5) {
+                    self.calculateView.frame.origin.y -= 1000
+                }
+            })
         } else {
             self.view.makeToast("something went wrong!")
         }

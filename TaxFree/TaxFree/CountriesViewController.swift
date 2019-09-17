@@ -11,14 +11,16 @@ import UIKit
 class CountriesViewController: UITableViewController {
     
     let countriesArray = ["RUB", "KZT", "BYN", "UAH", "CNY"]
-    let countriesDetail = ["Russia", "Kazakhstan", "Belarus", "Ukraine", "China"]
+    let countriesDetail = ["russia", "kazakhstan", "belarus", "ukraine", "china"]
     var filteredData: [String]!
     var choosedCell: String = ""
     
+    @IBOutlet weak var barButtonTitleLabel: UINavigationItem!
     @IBOutlet weak var closeItemButton: UIBarButtonItem!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.barButtonTitleLabel.title = Utils().getLocalizeString(key: "bar_title_label")
         filteredData = countriesArray
     }
     
@@ -47,7 +49,7 @@ class CountriesViewController: UITableViewController {
         let image = UIImage(named: "\(filteredData[indexPath.row])")
         cell.imageView?.image = image?.circleMask
         cell.textLabel?.text = self.filteredData[indexPath.row]
-        cell.detailTextLabel?.text = self.countriesDetail[indexPath.row]
+        cell.detailTextLabel?.text = Utils().getLocalizeString(key: "\(self.countriesDetail[indexPath.row])")
         cell.detailTextLabel?.textColor = .white
         
         return cell
@@ -56,14 +58,6 @@ class CountriesViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         choosedCell = filteredData[indexPath.row]
         self.performSegue(withIdentifier: "to_choose_currency_vc", sender: self)
-    }
-    
-    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
-        filteredData = searchText.isEmpty ? countriesArray : countriesArray.filter { (item: String) -> Bool in
-            
-            return item.range(of: searchText, options: .caseInsensitive, range: nil, locale: nil) != nil
-        }
-        tableView.reloadData()
     }
     
     override var prefersStatusBarHidden: Bool {

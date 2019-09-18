@@ -20,6 +20,7 @@ class ViewController: UIViewController {
     var namesArray: [String] = ["EUR", "USD", "GPB", "BYN", "BGN", "DKK", "KZT", "CHF", "JPY"]
     var i = 0
     
+    @IBOutlet weak var upcommingButton: UILabel!
     @IBOutlet weak var subTitleLabel: UILabel!
     @IBOutlet weak var currencyConverterLabel: UILabel!
     @IBOutlet weak var calculatorImage: UIImageView!
@@ -32,6 +33,7 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.upcommingButton.text = Utils().getLocalizeString(key: "upcomming_text_button")
         self.currencyConverterLabel.text = Utils().getLocalizeString(key: "currency_converter")
         self.subTitleLabel.text = Utils().getLocalizeString(key: "sub_title_cc")
         self.animateLabel.text = Utils().getLocalizeString(key: "welcome")

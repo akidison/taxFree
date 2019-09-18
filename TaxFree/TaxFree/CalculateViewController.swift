@@ -17,6 +17,7 @@ class CalculateViewController: UIViewController, UITextFieldDelegate {
     var indexOfCountry: Int = 0
     var minimumPurchase: Double = 0
     var currencies: [String] = []
+    var savedArrayCurrency: [String] = []
     var textViewString = ""
     var isReversed: Bool = false
     var valueK: Double = 0
@@ -158,8 +159,17 @@ class CalculateViewController: UIViewController, UITextFieldDelegate {
     }
     
     @objc func addTapped() {
-        Utils().saveValueForDefaults(value: choosedCurrency, key: "currency_saved")
+        savedArrayCurrency.append(choosedCurrency)
+        Utils().saveValueForDefaults(value: savedArrayCurrency, key: "currency_saved")
+        if let test: AnyObject = Utils().getValueFromDefaults(key: "currency_saved") as AnyObject? {
+            let arr : [String] = test as! [String]
+            print(arr)
+        }
         Utils().createCustomToast(toastView: self.view)
+    }
+    
+    func checkValueInsideArray(array: Array<String>) {
+
     }
 }
 

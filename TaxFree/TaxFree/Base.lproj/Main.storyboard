@@ -416,6 +416,7 @@
                         <outlet property="currencyConverterLabel" destination="0zl-QZ-U72" id="h4G-4z-yrW"/>
                         <outlet property="refundCalcButton" destination="5mK-xi-Xrg" id="Ld9-zq-e5Z"/>
                         <outlet property="subTitleLabel" destination="FOh-Y1-p2e" id="TF1-no-qfg"/>
+                        <outlet property="upcommingButton" destination="jLU-g2-cTk" id="sN9-By-Uld"/>
                         <outlet property="vatCountryRulesView" destination="TCb-Da-DOe" id="ZtI-4W-Ewm"/>
                         <segue destination="cdm-Nd-U6T" kind="show" identifier="choose_your_country" id="K6z-JU-rzU"/>
                     </connections>

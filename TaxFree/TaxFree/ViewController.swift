@@ -1,4 +1,3 @@
-//
 //  ViewController.swift
 //  TaxFree
 //
@@ -56,13 +55,8 @@ class ViewController: UIViewController {
     
     @IBAction func calculateButtonClicked(_ sender: Any) {
         if (Utils().getValueFromDefaults(key: "json_object") != nil) {
-            UIView.animate(withDuration: 0.4, animations: {
-                self.calculateView.frame.origin.y += 1000
-            }, completion: { _ in
+            UIView.animate(withDuration: 0.4, animations: {}, completion: { _ in
                 self.performSegue(withIdentifier: "choose_your_country", sender: self)
-                UIView.animate(withDuration: 2.5) {
-                    self.calculateView.frame.origin.y -= 1000
-                }
             })
         } else {
             self.view.makeToast("something went wrong!")

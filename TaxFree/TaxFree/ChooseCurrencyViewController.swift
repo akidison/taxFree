@@ -1,4 +1,3 @@
-//
 //  ChooseCurrencyViewController.swift
 //  TaxFree
 //

@@ -1,4 +1,3 @@
-//
 //  CountriesRulesViewController.swift
 //  TaxFree
 //

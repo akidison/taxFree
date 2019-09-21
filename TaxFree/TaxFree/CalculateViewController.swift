@@ -1,4 +1,3 @@
-//
 //  CalculateViewController.swift
 //  TaxFree
 //
@@ -159,13 +158,16 @@ class CalculateViewController: UIViewController, UITextFieldDelegate {
     }
     
     @objc func addTapped() {
-        savedArrayCurrency.append(choosedCurrency)
-        Utils().saveValueForDefaults(value: savedArrayCurrency, key: "currency_saved")
-        if let test: AnyObject = Utils().getValueFromDefaults(key: "currency_saved") as AnyObject? {
-            let arr : [String] = test as! [String]
-            print(arr)
+        if (Utils().getValueFromDefaults(key: "saved_array") as? [String]) != nil {
+            savedArrayCurrency = Utils().getValueFromDefaults(key: "saved_array") as! [String]
         }
-        Utils().createCustomToast(toastView: self.view)
+        if savedArrayCurrency.contains(where: {$0 == self.choosedCurrency}) {
+            Utils().showToastWithCustomtexts(title: "always_added_title", message: "always_added_message", selfView: self.view, imageName: "importante.png", duration: 0.8)
+        } else {
+            savedArrayCurrency.append(choosedCurrency)
+            Utils().saveValueForDefaults(value: savedArrayCurrency, key: "saved_array")
+            Utils().createCustomToast(toastView: self.view)
+        }
     }
     
     func checkValueInsideArray(array: Array<String>) {

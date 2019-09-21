@@ -18,6 +18,18 @@ class Utils: NSObject {
         UserDefaults.standard.set(value, forKey: key)
     }
     
+    func showToastWithCustomtexts(title: String, message: String, toastView: UIView) {
+        var toastStyle = ToastStyle()
+        toastStyle.imageSize = CGSize(width: 20, height: 20)
+        toastStyle.fadeDuration = 0.8
+        toastStyle.titleAlignment = .left
+        toastStyle.titleFont = UIFont(name: "AppleSDGothicNeo-Bold", size: 20)!
+        toastStyle.messageAlignment = .left
+        toastStyle.messageFont = UIFont(name: "AppleSDGothicNeo-Bold", size: 15)!
+        let toastPosition = CGPoint(x: toastView.bounds.width/2, y: toastView.bounds.height/2)
+        toastView.makeToast(Utils().getLocalizeString(key: title), duration: 1.5, point: toastPosition, title: Utils().getLocalizeString(key: message), image: UIImage(named: "importante.png"), style: toastStyle, completion: nil)
+    }
+    
     func createCustomToast(toastView: UIView) {
         var toastStyle = ToastStyle()
         toastStyle.imageSize = CGSize(width: 20, height: 20)

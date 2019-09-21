@@ -12,7 +12,6 @@ import Toast_Swift
 
 class InitMainViewController: UIViewController {
     
-    let progress = Progress(totalUnitCount: 10)
     let jsonUrl = "https://www.cbr-xml-daily.ru/daily_json.js"
 
     @IBOutlet weak var currencyConverterLabel: UILabel!
@@ -35,7 +34,6 @@ class InitMainViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-//        self.immitationLoad()
         self.currencyConverterLabel.text = Utils().getLocalizeString(key: "currency_converter")
         self.activityIndicator.startAnimating()
     }
@@ -44,23 +42,6 @@ class InitMainViewController: UIViewController {
         let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
         let nextViewController = storyBoard.instantiateViewController(withIdentifier: "mainView") as! ViewController
         self.present(nextViewController, animated:true, completion:nil)
-    }
-    
-    func immitationLoad() {
-        barProgress.progress = 0.0
-        progress.completedUnitCount = 0
-        if #available(iOS 10.0, *) {
-            Timer.scheduledTimer(withTimeInterval: 0.25, repeats: true) { (timer) in
-                guard self.progress.isFinished == false else {
-                    timer.invalidate()
-                    return
-                }
-                self.progress.completedUnitCount += 1
-                self.barProgress.setProgress(Float(self.progress.fractionCompleted), animated: true)
-            }
-        } else {
-            // Fallback on earlier versions
-        }
     }
     
     func getJsonData(urlAddress: String, result: @escaping (Bool, Error?) -> Void) {
@@ -152,5 +133,4 @@ class InitMainViewController: UIViewController {
     override var prefersStatusBarHidden: Bool {
         return true
     }
-
 }

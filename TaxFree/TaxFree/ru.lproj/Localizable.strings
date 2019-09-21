@@ -5,7 +5,7 @@
   Created by Andrey Kiselev on 16/09/2019.
   Copyright © 2019 Andrey Kiselev. All rights reserved.
 */
-
+ 
 "currency_converter" = "Конвертер Валют";
 "data_downloading" = "Загрузка...";
 "sub_title_cc" = "То что нужно!";
@@ -59,3 +59,5 @@
 "calk_text" = "Калькулятор";
 "fav_top_item_text" = "Избранное";
 "upcomming_text_button" = "Тут скоро будет еще лучше.";
+"always_added_title" = "This currency has already added. You can find it in your favoutites currencies.";
+"always_added_message" = "Opps!";

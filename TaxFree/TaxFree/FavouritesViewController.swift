@@ -18,10 +18,17 @@ class FavouritesViewController: UITableViewController {
         self.navigationItemBar.title = Utils().getLocalizeString(key: "fav_top_item_text")
         if (Utils().getValueFromDefaults(key: "saved_array") != nil) {
             saved = Utils().getValueFromDefaults(key: "saved_array") as! [String]
+            if saved.isEmpty {
+                self.showToastWithSavedEmpty()
+            }
         } else {
             saved = []
-            Utils().showToastWithCustomtexts(title: "empty_title_msg", message: "empty_title_text", selfView: self.view, imageName: "importante.png", duration: 4.0)
+            self.showToastWithSavedEmpty()
         }
+    }
+    
+    func showToastWithSavedEmpty() {
+        Utils().showToastWithCustomtexts(title: "empty_title_msg", message: "empty_title_text", selfView: self.view, imageName: "importante.png", duration: 4.0)
     }
     // MARK: - Table view data source
     override func numberOfSections(in tableView: UITableView) -> Int {

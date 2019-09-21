@@ -32,6 +32,7 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.resizibleLabel(label: self.currencyConverterLabel)
         self.upcommingButton.text = Utils().getLocalizeString(key: "upcomming_text_button")
         self.currencyConverterLabel.text = Utils().getLocalizeString(key: "currency_converter")
         self.subTitleLabel.text = Utils().getLocalizeString(key: "sub_title_cc")
@@ -109,8 +110,8 @@ class ViewController: UIViewController {
         self.view.hideToastActivity()
     }
     
-    override var prefersStatusBarHidden: Bool {
-        return true
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+          return .lightContent
     }
     
     func incrementAppRuns() {
@@ -129,6 +130,12 @@ class ViewController: UIViewController {
         }
         print("Run Counts are \(runs)")
         return runs
+    }
+    
+    func resizibleLabel(label: UILabel) {
+        label.adjustsFontSizeToFitWidth = true
+        label.numberOfLines = 0
+        label.minimumScaleFactor = 0.2
     }
     
     func showReview() {

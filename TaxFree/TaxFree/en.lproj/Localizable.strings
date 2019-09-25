@@ -25,7 +25,7 @@
 "Бразильский реал" = "Brazilian real";
 "Белорусский рубль" = "Belarusian ruble";
 "Канадский доллар" = "Canadian dollar";
-"Швейцарский франк" = "Swedish krona";
+"Швейцарский франк" = "Swiss frank";
 "Китайских юаней" = "Chinese yuan";
 "Чешских крон" = "Czech koruna";
 "Датских крон" = "Danish krone";
@@ -63,3 +63,5 @@
 "always_added_message" = "Oops!";
 "empty_title_text" = "Hm...";
 "empty_title_msg" = "You have't currencies yet! You can add it from calculate tab controller.";
+"sorry_ruble_msg" = "Sorry!";
+"sorry_rub_title" = "This function doesn't work for this currency yet!";

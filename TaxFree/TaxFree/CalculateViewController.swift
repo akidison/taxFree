@@ -34,6 +34,9 @@ class CalculateViewController: UIViewController, UITextFieldDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(UIInputViewController.dismissKeyboard))
+        view.addGestureRecognizer(tap)
+
         self.navigationItem.title = Utils().getLocalizeString(key: "calk_text")
         self.resultTextLabel.text = Utils().getLocalizeString(key: "result_text_label")
         self.moneyAmmountLabel.text = Utils().getLocalizeString(key: "money_amount_text")
@@ -47,6 +50,10 @@ class CalculateViewController: UIViewController, UITextFieldDelegate {
         self.currencyCodeResult.text = choosedCurrency
         self.countryLabel.text = Utils().getLocalizeString(key: choosedDescription)
         print(choosedValue)
+    }
+    
+    func isChoosedRuble() -> Bool {
+        return (choosedCountry != "RUB") ? false : true
     }
 
     func setCornerRadius(label: UILabel) {
@@ -157,7 +164,15 @@ class CalculateViewController: UIViewController, UITextFieldDelegate {
         self.navigationItem.rightBarButtonItems = [barButtonItem]
     }
     
+    @objc func dismissKeyboard() {
+        view.endEditing(true)
+    }
+    
     @objc func addTapped() {
+        if !self.isChoosedRuble() {
+            Utils().showToastWithCustomtexts(title: "sorry_rub_title", message: "sorry_ruble_msg", selfView: self.view, imageName: "importante.png", duration: 4.0)
+            return
+        }
         if (Utils().getValueFromDefaults(key: "saved_array") as? [String]) != nil {
             savedArrayCurrency = Utils().getValueFromDefaults(key: "saved_array") as! [String]
         }
@@ -168,10 +183,6 @@ class CalculateViewController: UIViewController, UITextFieldDelegate {
             Utils().saveValueForDefaults(value: savedArrayCurrency, key: "saved_array")
             Utils().createCustomToast(toastView: self.view)
         }
-    }
-    
-    func checkValueInsideArray(array: Array<String>) {
-
     }
 }
 

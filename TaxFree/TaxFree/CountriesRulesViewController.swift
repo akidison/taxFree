@@ -57,7 +57,6 @@ class CountriesRulesViewController: UITableViewController, UISearchBarDelegate {
     
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
         filteredData = searchText.isEmpty ? countriesArray : countriesArray.filter { (item: String) -> Bool in
-            
             return item.range(of: searchText, options: .caseInsensitive, range: nil, locale: nil) != nil
         }
         tableView.reloadData()

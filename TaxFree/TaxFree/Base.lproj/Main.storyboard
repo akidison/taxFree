@@ -70,7 +70,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Wf9-2F-JCC" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-570" y="67.605633802816897"/>
+            <point key="canvasLocation" x="-558" y="68"/>
         </scene>
         <!--Countries-->
         <scene sceneID="4jj-oX-Yc1">
@@ -511,41 +511,24 @@
                     </tableView>
                     <connections>
                         <segue destination="3zR-rh-r4r" kind="show" identifier="to_calculate_vc" id="KGn-tY-jlS"/>
+                        <segue destination="jtv-c2-LiE" kind="show" identifier="to_favourite_vc" id="obP-uZ-BGF"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FlP-BN-vra" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2494" y="68"/>
         </scene>
-        <!--Favourites View Controller-->
+        <!--Favourites-->
         <scene sceneID="lk5-H8-EXa">
             <objects>
                 <tableViewController storyboardIdentifier="favourites_vc" modalPresentationStyle="fullScreen" id="jtv-c2-LiE" customClass="FavouritesViewController" customModule="TaxFree" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="70" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="ki8-B3-7Dd">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
-                        <navigationBar key="tableHeaderView" contentMode="scaleToFill" barStyle="black" largeTitles="YES" id="hWk-Nu-hre">
-                            <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
-                            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                            <color key="barTintColor" red="0.054760131975304306" green="0.058399808577361427" blue="0.064201534040011943" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                            <textAttributes key="titleTextAttributes">
-                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                            </textAttributes>
-                            <items>
-                                <navigationItem id="3hd-wJ-29E">
-                                    <barButtonItem key="rightBarButtonItem" image="header__close_button_959643.png" id="uS4-YT-ZRS">
-                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <connections>
-                                            <action selector="closeButtonClicked:" destination="jtv-c2-LiE" id="n0c-ne-U0w"/>
-                                        </connections>
-                                    </barButtonItem>
-                                </navigationItem>
-                            </items>
-                        </navigationBar>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="cell" textLabel="h0P-Ta-OVe" rowHeight="70" style="IBUITableViewCellStyleDefault" id="2tX-2v-OJj">
-                                <rect key="frame" x="0.0" y="72" width="414" height="70"/>
+                                <rect key="frame" x="0.0" y="28" width="414" height="70"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="2tX-2v-OJj" id="jJT-G9-QcY">
                                     <rect key="frame" x="0.0" y="0.0" width="382.66666666666669" height="70"/>
@@ -568,13 +551,14 @@
                             <outlet property="delegate" destination="jtv-c2-LiE" id="Rig-nS-88h"/>
                         </connections>
                     </tableView>
+                    <navigationItem key="navigationItem" title="Favourites" id="EYH-fs-Mpa"/>
                     <connections>
-                        <outlet property="navigationItemBar" destination="3hd-wJ-29E" id="tJb-86-nf7"/>
+                        <segue destination="3zR-rh-r4r" kind="show" identifier="to_calculate_vc_from_fav" id="ckV-JV-VLL"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VOb-Lc-qV6" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3241" y="767"/>
+            <point key="canvasLocation" x="3241" y="737"/>
         </scene>
         <!--CALCULATOR-->
         <scene sceneID="ROl-1I-uR0">
@@ -599,6 +583,7 @@
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ubi-sl-1tN">
                                         <rect key="frame" x="54" y="28" width="329" height="48"/>
                                         <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <fontDescription key="fontDescription" name="AppleSDGothicNeo-Bold" family="Apple SD Gothic Neo" pointSize="30"/>
                                         <textInputTraits key="textInputTraits" keyboardType="decimalPad" keyboardAppearance="alert"/>
                                     </textField>
@@ -615,7 +600,7 @@
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="money amount" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yR6-FG-jZd">
                                         <rect key="frame" x="11" y="80" width="91.666666666666671" height="21"/>
                                         <fontDescription key="fontDescription" name="AppleSDGothicNeo-Thin" family="Apple SD Gothic Neo" pointSize="15"/>
-                                        <nil key="textColor"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="USD" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="skX-xN-pbR">
@@ -736,6 +721,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="tLC-Lx-ZrI"/>
                     </view>
+                    <navigationItem key="navigationItem" id="Pqh-KM-2Vk"/>
                     <connections>
                         <outlet property="countryLabel" destination="WlB-m8-cYl" id="NJ3-si-mWO"/>
                         <outlet property="currencyCodeCustom" destination="skX-xN-pbR" id="oRu-Cq-1oc"/>
@@ -801,4 +787,7 @@
         <image name="reversErrorws.png" width="200" height="200"/>
         <image name="taxImg.jpg" width="1280" height="720"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="KGn-tY-jlS"/>
+    </inferredMetricsTieBreakers>
 </document>

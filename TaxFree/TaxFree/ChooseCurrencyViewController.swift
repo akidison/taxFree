@@ -65,8 +65,13 @@ class ChooseCurrencyViewController: UITableViewController {
                 nextViewController.valueK = valueK
             }
         }
+        if segue.identifier == "to_favourite_vc" {
+            if let favouriteViewController = segue.destination as? FavouritesViewController {
+                favouriteViewController.choosedCountry = choosedCountry
+                favouriteViewController.valueK = valueK
+            }
+        }
     }
-
     // MARK: - Table view data source
     override func numberOfSections(in tableView: UITableView) -> Int {
         return 1
@@ -148,7 +153,6 @@ class ChooseCurrencyViewController: UITableViewController {
     }
     
     @objc func addTapped() {
-        let favouritesVc = storyboard?.instantiateViewController(withIdentifier: "favourites_vc") as! FavouritesViewController
-        present(favouritesVc, animated: true, completion: nil)
+        self.performSegue(withIdentifier: "to_favourite_vc", sender: self)
     }
 }

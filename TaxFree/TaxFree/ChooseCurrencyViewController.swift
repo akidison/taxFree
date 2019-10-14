@@ -30,7 +30,7 @@ class ChooseCurrencyViewController: UITableViewController {
         
         if let title = json["Valute"] {
             jsonCodes = title as! Dictionary<String, AnyObject>
-            for i in jsonCodes.keys.sorted(by: { $0 < $1 }) {
+            for i in jsonCodes.keys {
                 if let valueContainer = jsonCodes[i] {
                     if let charCode = valueContainer["CharCode"] {
                         charCodeArray.append(charCode as! String)

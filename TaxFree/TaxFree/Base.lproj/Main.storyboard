@@ -64,8 +64,8 @@
                     </view>
                     <connections>
                         <outlet property="activityIndicator" destination="Fli-q3-Cjt" id="XM0-ef-uvU"/>
+                        <outlet property="animatedView" destination="p5R-bd-EfL" id="zip-Ji-Eli"/>
                         <outlet property="dataDownloadingLabel" destination="Fl0-Kr-C5x" id="fcD-qx-Slo"/>
-                        <outlet property="test" destination="p5R-bd-EfL" id="YpI-xr-Ksh"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Wf9-2F-JCC" userLabel="First Responder" sceneMemberID="firstResponder"/>

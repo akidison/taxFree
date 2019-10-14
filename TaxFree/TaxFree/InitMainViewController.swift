@@ -15,7 +15,7 @@ class InitMainViewController: UIViewController {
     let jsonUrl = "https://www.cbr-xml-daily.ru/daily_json.js"
 
     @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
-    @IBOutlet weak var test: UIView!
+    @IBOutlet weak var animatedView: UIView!
     @IBOutlet weak var dataDownloadingLabel: UILabel!
     
     override func viewDidAppear(_ animated: Bool) {
@@ -35,14 +35,14 @@ class InitMainViewController: UIViewController {
         self.activityIndicator.startAnimating()
     }
     
-    func goToNextView() {
+    func goToMainViewController() {
         let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
         let nextViewController = storyBoard.instantiateViewController(withIdentifier: "mainView") as! ViewController
         self.present(nextViewController, animated:true, completion:nil)
     }
     
     func getJsonData(urlAddress: String, result: @escaping (Bool, Error?) -> Void) {
-        self.test.alpha = 0.0
+        self.animatedView.alpha = 0.0
         self.activityIndicator.alpha = 1.0
         if (Utils().getValueFromDefaults(key: "json_object") == nil) {
             guard let url = URL(string: urlAddress) else {
@@ -83,8 +83,8 @@ class InitMainViewController: UIViewController {
             self.dataDownloadingLabel.alpha = 0.0
             self.activityIndicator.stopAnimating()
             self.showHideViewElements(alphaView: 1.0, alphaActivity: 0.0)
-            self.test.animation.makeCenter(self.view.bounds.width/2, self.view.bounds.height/2).makeScale(3.0).spring.makeOpacity(0.0).animate(3.0).animationCompletion = {
-                self.goToNextView()
+            self.animatedView.animation.makeCenter(self.view.bounds.width/2, self.view.bounds.height/2).makeScale(3.0).spring.makeOpacity(0.0).animate(3.0).animationCompletion = {
+                self.goToMainViewController()
             }
         }
     }
@@ -98,7 +98,7 @@ class InitMainViewController: UIViewController {
     
     func showHideViewElements(alphaView: CGFloat, alphaActivity: CGFloat) {
         self.activityIndicator.alpha = alphaActivity
-        self.test.alpha = alphaView
+        self.animatedView.alpha = alphaView
     }
     
     func showToastInformationError(error: Error?) {

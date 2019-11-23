@@ -10,6 +10,7 @@ import UIKit
 import Toast_Swift
 
 class Utils: NSObject {
+    
     func getValueFromDefaults(key: String) -> Any! {
         return UserDefaults.standard.value(forKey: key) as Any?
     }

@@ -11,8 +11,6 @@
 		7A325A392311B064007F02C5 /* CalculateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A325A382311B064007F02C5 /* CalculateViewController.swift */; };
 		7A325A3B23128E4F007F02C5 /* CountriesRulesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A325A3A23128E4F007F02C5 /* CountriesRulesViewController.swift */; };
 		7A325A3D23129CE4007F02C5 /* InfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A325A3C23129CE4007F02C5 /* InfoViewController.swift */; };
-		7A325A3F23129DA7007F02C5 /* GermanyC.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 7A325A3E23129DA6007F02C5 /* GermanyC.jpg */; };
-		7A325A4223129E4F007F02C5 /* AustriaC.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 7A325A4123129E4F007F02C5 /* AustriaC.jpg */; };
 		7A325A44231476BD007F02C5 /* RUB.png in Resources */ = {isa = PBXBuildFile; fileRef = 7A325A43231476BD007F02C5 /* RUB.png */; };
 		7A325A4623147762007F02C5 /* KZT.png in Resources */ = {isa = PBXBuildFile; fileRef = 7A325A4523147762007F02C5 /* KZT.png */; };
 		7A325A4823147796007F02C5 /* BYN.png in Resources */ = {isa = PBXBuildFile; fileRef = 7A325A4723147796007F02C5 /* BYN.png */; };
@@ -71,6 +69,7 @@
 		7AB5BE8C2329959D00AFD6CD /* success.png in Resources */ = {isa = PBXBuildFile; fileRef = 7AB5BE8B2329959D00AFD6CD /* success.png */; };
 		7AB5BE97233026EA00AFD6CD /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 7AB5BE95233026EA00AFD6CD /* Localizable.strings */; };
 		7AC5DB6723368AD400C67874 /* importante.png in Resources */ = {isa = PBXBuildFile; fileRef = 7AC5DB6623368AD400C67874 /* importante.png */; };
+		7AF0DE502378368400365694 /* UtilsKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AF0DE4F2378368400365694 /* UtilsKeys.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -79,13 +78,11 @@
 		7A325A382311B064007F02C5 /* CalculateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculateViewController.swift; sourceTree = "<group>"; };
 		7A325A3A23128E4F007F02C5 /* CountriesRulesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountriesRulesViewController.swift; sourceTree = "<group>"; };
 		7A325A3C23129CE4007F02C5 /* InfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoViewController.swift; sourceTree = "<group>"; };
-		7A325A3E23129DA6007F02C5 /* GermanyC.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = GermanyC.jpg; sourceTree = "<group>"; };
-		7A325A4123129E4F007F02C5 /* AustriaC.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = AustriaC.jpg; sourceTree = "<group>"; };
 		7A325A43231476BD007F02C5 /* RUB.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = RUB.png; sourceTree = "<group>"; };
 		7A325A4523147762007F02C5 /* KZT.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = KZT.png; sourceTree = "<group>"; };
 		7A325A4723147796007F02C5 /* BYN.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = BYN.png; sourceTree = "<group>"; };
 		7A325A49231477CD007F02C5 /* UAH.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = UAH.png; sourceTree = "<group>"; };
-		7A325A4B23158892007F02C5 /* ChooseCurrencyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChooseCurrencyViewController.swift; sourceTree = "<group>"; };
+		7A325A4B23158892007F02C5 /* ChooseCurrencyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ChooseCurrencyViewController.swift; path = TaxFree/View_Controllers/ChooseCurrencyViewController.swift; sourceTree = SOURCE_ROOT; };
 		7A325A4D2315C59E007F02C5 /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
 		7A4F7D9A22B978E600D67359 /* TaxFree.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TaxFree.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7A4F7D9D22B978E600D67359 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -147,6 +144,7 @@
 		7AC5DB7923368E7900C67874 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
 		7AC5DB7A2336A20900C67874 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Main.strings; sourceTree = "<group>"; };
 		7AC5DB7B2336A20D00C67874 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Main.strings; sourceTree = "<group>"; };
+		7AF0DE4F2378368400365694 /* UtilsKeys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = UtilsKeys.swift; path = TaxFree/UtilsKeys.swift; sourceTree = SOURCE_ROOT; };
 		81CEAF0CF1B2BD4F6E227066 /* Pods-TaxFree.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TaxFree.debug.xcconfig"; path = "Target Support Files/Pods-TaxFree/Pods-TaxFree.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -162,15 +160,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		7A325A4023129DB8007F02C5 /* countries_city */ = {
-			isa = PBXGroup;
-			children = (
-				7A325A3E23129DA6007F02C5 /* GermanyC.jpg */,
-				7A325A4123129E4F007F02C5 /* AustriaC.jpg */,
-			);
-			path = countries_city;
-			sourceTree = "<group>";
-		};
 		7A4F7D9122B978E600D67359 = {
 			isa = PBXGroup;
 			children = (
@@ -194,15 +183,9 @@
 			isa = PBXGroup;
 			children = (
 				7A4F7D9D22B978E600D67359 /* AppDelegate.swift */,
-				7A8398CE23115A9800106B07 /* InitMainViewController.swift */,
-				7A4F7D9F22B978E600D67359 /* ViewController.swift */,
-				7A8398D02311799000106B07 /* CountriesViewController.swift */,
-				7A325A4B23158892007F02C5 /* ChooseCurrencyViewController.swift */,
-				7A325A3A23128E4F007F02C5 /* CountriesRulesViewController.swift */,
-				7A325A382311B064007F02C5 /* CalculateViewController.swift */,
-				7A325A3C23129CE4007F02C5 /* InfoViewController.swift */,
-				7AB5BE7D2326E05500AFD6CD /* FavouritesViewController.swift */,
+				7AF0DE5223783DE700365694 /* View_Controllers */,
 				7A325A4D2315C59E007F02C5 /* Utils.swift */,
+				7AF0DE4F2378368400365694 /* UtilsKeys.swift */,
 				7A4F7DA122B978E600D67359 /* Main.storyboard */,
 				7A4F7DA422B978E700D67359 /* Assets.xcassets */,
 				7A4F7DA622B978E700D67359 /* LaunchScreen.storyboard */,
@@ -217,7 +200,6 @@
 			isa = PBXGroup;
 			children = (
 				7A8398D82311886A00106B07 /* countries */,
-				7A325A4023129DB8007F02C5 /* countries_city */,
 				7AB5BE302323A81400AFD6CD /* currencies_flags */,
 				7A8398C523114CF600106B07 /* taxImg.jpg */,
 				7AC5DB6623368AD400C67874 /* importante.png */,
@@ -281,6 +263,21 @@
 				7AB5BE7723252BD500AFD6CD /* XDR.png */,
 			);
 			path = currencies_flags;
+			sourceTree = "<group>";
+		};
+		7AF0DE5223783DE700365694 /* View_Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				7A8398CE23115A9800106B07 /* InitMainViewController.swift */,
+				7A4F7D9F22B978E600D67359 /* ViewController.swift */,
+				7A8398D02311799000106B07 /* CountriesViewController.swift */,
+				7A325A4B23158892007F02C5 /* ChooseCurrencyViewController.swift */,
+				7A325A3A23128E4F007F02C5 /* CountriesRulesViewController.swift */,
+				7A325A382311B064007F02C5 /* CalculateViewController.swift */,
+				7A325A3C23129CE4007F02C5 /* InfoViewController.swift */,
+				7AB5BE7D2326E05500AFD6CD /* FavouritesViewController.swift */,
+			);
+			path = View_Controllers;
 			sourceTree = "<group>";
 		};
 		8958971FDE873D959ACEC9D0 /* Frameworks */ = {
@@ -391,9 +388,7 @@
 				7AB5BE5C2323B16E00AFD6CD /* HUF.png in Resources */,
 				7AB5BE542323B06100AFD6CD /* TJS.png in Resources */,
 				7AB5BE3E2323AC9200AFD6CD /* SEK.png in Resources */,
-				7A325A4223129E4F007F02C5 /* AustriaC.jpg in Resources */,
 				7AB5BE462323AE1C00AFD6CD /* DKK.png in Resources */,
-				7A325A3F23129DA7007F02C5 /* GermanyC.jpg in Resources */,
 				7AB5BE382323ABBC00AFD6CD /* BRL.png in Resources */,
 				7A325A4623147762007F02C5 /* KZT.png in Resources */,
 				7A4F7DA522B978E700D67359 /* Assets.xcassets in Resources */,
@@ -502,6 +497,7 @@
 				7A4F7D9E22B978E600D67359 /* AppDelegate.swift in Sources */,
 				7A8398CF23115A9800106B07 /* InitMainViewController.swift in Sources */,
 				7A325A3D23129CE4007F02C5 /* InfoViewController.swift in Sources */,
+				7AF0DE502378368400365694 /* UtilsKeys.swift in Sources */,
 				7A325A3B23128E4F007F02C5 /* CountriesRulesViewController.swift in Sources */,
 				7A325A392311B064007F02C5 /* CalculateViewController.swift in Sources */,
 				7AB5BE7E2326E05500AFD6CD /* FavouritesViewController.swift in Sources */,
@@ -680,7 +676,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = akidisLab.TaxFree;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -701,7 +697,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = akidisLab.TaxFree;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

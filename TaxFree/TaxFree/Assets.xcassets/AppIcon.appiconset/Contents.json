@@ -93,7 +93,7 @@
     {
       "size" : "76x76",
       "idiom" : "ipad",
-      "filename" : "1024-1.png",
+      "filename" : "76x2-1.png",
       "scale" : "2x"
     },
     {
@@ -105,7 +105,7 @@
     {
       "size" : "1024x1024",
       "idiom" : "ios-marketing",
-      "filename" : "1024.png",
+      "filename" : "1024-1.png",
       "scale" : "1x"
     }
   ],
